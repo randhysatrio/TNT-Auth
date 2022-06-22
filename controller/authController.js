@@ -16,13 +16,4 @@ module.exports = {
       res.status(500).send(err.message);
     }
   },
-  verify: (req, res) => {
-    try {
-      const { username, password } = req.user;
-
-      res.status(200).send({ username, password });
-    } catch (err) {
-      res.status(500).send(err.message);
-    }
-  },
 };
